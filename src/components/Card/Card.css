@@ -1,0 +1,25 @@
+.app-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 156px;
+  height: 156px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #808080;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.app-card-title {
+  margin-bottom: 12px;
+  margin-top: 0;
+  color: #fff;
+}
+
+.app-card-description {
+  font-size: 12px;
+  color: #808080;
+  padding: 0 4px;
+}

@@ -1,6 +1,6 @@
 .app {
   background-color: #201242;
-  height: 100vh;
+  height: auto;
 }
 
 .app-container {
@@ -12,4 +12,14 @@
 
 .app-search-container {
   margin-top: 16px;
+}
+
+.app-cards-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+}
+
+.app-card-column {
+  margin: 24px;
 }

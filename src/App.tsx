@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import SearchInput from "./components/SearchInput/SearchInput";
 import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
 import { useFetchTickers } from "./hooks/useFetchTickers";
 
 const App = () => {
@@ -16,7 +17,9 @@ const App = () => {
   });
 
   const tickersList = tickers.map((item) => (
-    <li key={item.ticker}>{item.ticker}</li>
+    <div className="app-card-column">
+      <Card key={item.ticekr} title={item.ticker} description={item.name} />
+    </div>
   ));
 
   const handleSearch = (searchTerm: string) => {
@@ -30,9 +33,7 @@ const App = () => {
         <div className="app-search-container">
           <SearchInput handleSearch={handleSearch} />
         </div>
-        <div>Search: {searchValue}</div>
-        {loading ? <p>Loading...</p> : tickersList}
-        {error}
+        <div className="app-cards-row">{tickersList}</div>
       </div>
     </div>
   );
