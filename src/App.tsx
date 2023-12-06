@@ -27,7 +27,7 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <>
       <Header />
       <div className="app-container">
         <div className="app-search-container">
@@ -35,7 +35,7 @@ const App = () => {
         </div>
         <div className="app-cards-row">{tickersList}</div>
       </div>
-    </div>
+    </>
   );
 };
 
