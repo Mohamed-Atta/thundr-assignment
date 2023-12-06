@@ -9,6 +9,11 @@
   margin-top: 16px;
 }
 
+.app-error {
+  color: #fff;
+  font-size: 24px;
+}
+
 .app-cards-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

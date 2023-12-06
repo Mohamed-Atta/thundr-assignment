@@ -3,6 +3,7 @@ import "./App.css";
 import SearchInput from "./components/SearchInput/SearchInput";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
+import Loading from "./components/Loading/Loading";
 import { useFetchTickers } from "./hooks/useFetchTickers";
 
 const App = () => {
@@ -33,7 +34,14 @@ const App = () => {
         <div className="app-search-container">
           <SearchInput handleSearch={handleSearch} />
         </div>
-        <div className="app-cards-row">{tickersList}</div>
+        {error && <div className="app-error">
+          {error}
+        </div>}
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className="app-cards-row">{tickersList}</div>
+        )}
       </div>
     </>
   );
