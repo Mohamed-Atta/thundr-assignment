@@ -17,11 +17,15 @@ const App = () => {
     searchValue,
   });
 
-  const tickersList = tickers.map((item) => (
-    <div className="app-card-column">
-      <Card key={item.ticekr} title={item.ticker} description={item.name} />
-    </div>
-  ));
+  const tickersList = !tickers.length && !error ? (
+    <div className="app-empty-state">No results found for your search!</div>
+  ) : (
+    tickers.map((item) => (
+      <div className="app-card-column">
+        <Card key={item.ticekr} title={item.ticker} description={item.name} />
+      </div>
+    ))
+  );
 
   const handleSearch = (searchTerm: string) => {
     setSearchValue(searchTerm);
@@ -34,9 +38,7 @@ const App = () => {
         <div className="app-search-container">
           <SearchInput handleSearch={handleSearch} />
         </div>
-        {error && <div className="app-error">
-          {error}
-        </div>}
+        {error && <div className="app-error">{error}</div>}
         {loading ? (
           <Loading />
         ) : (
