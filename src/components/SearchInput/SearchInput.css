@@ -1,0 +1,9 @@
+.app-search {
+  border-radius: 24px;
+  height: 24px;
+  width: 360px;
+  background-color: #120633;
+  outline: none;
+  padding: 4px 12px;
+  color: #fff;
+}
