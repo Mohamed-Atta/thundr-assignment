@@ -13,13 +13,18 @@ export const useFetchTickers = ({ limit, searchValue }: FetchTickersProps) => {
   const [tickers, setTickers] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+  const [success, setSuccess] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchTickers = async () => {
       setLoading(true);
       try {
         const response = await fetch(url);
-        if (!response.ok) throw new Error(response.statusText);
+        if (response.ok) {
+          setSuccess(true)
+        } else {
+          throw new Error(response.statusText);
+        }
         const json = await response.json();
         setLoading(false);
         setTickers(json.results);
@@ -31,5 +36,5 @@ export const useFetchTickers = ({ limit, searchValue }: FetchTickersProps) => {
     };
     fetchTickers();
   }, [url, limit, searchValue]);
-  return { tickers, loading, error };
+  return { tickers, loading, error, success };
 };
