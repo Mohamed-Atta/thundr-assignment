@@ -2,8 +2,16 @@
   height: 36px;
   background-color: #120633;
   padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .app-logo {
   height: 30px;
+}
+
+.app-dev-name {
+  color: #fff;
 }
