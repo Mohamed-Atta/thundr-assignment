@@ -1,8 +1,7 @@
 import React from "react";
-import { render, fireEvent, waitFor } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import SearchInput from "./SearchInput";
 import "@testing-library/jest-dom/extend-expect";
-import * as hooks from "../../hooks/useFetchTickers";
 
 describe("Search Input", () => {
   it("updates on change", () => {
