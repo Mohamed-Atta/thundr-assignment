@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/thundr-assignment/static/css/main.365955db.css",
+    "main.js": "/thundr-assignment/static/js/main.30f37a6c.js",
+    "static/js/787.663e1816.chunk.js": "/thundr-assignment/static/js/787.663e1816.chunk.js",
+    "static/media/logo.png": "/thundr-assignment/static/media/logo.ab347bfe2fa686c68c26.png",
+    "service-worker.js": "/thundr-assignment/service-worker.js",
+    "index.html": "/thundr-assignment/index.html",
+    "main.365955db.css.map": "/thundr-assignment/static/css/main.365955db.css.map",
+    "main.30f37a6c.js.map": "/thundr-assignment/static/js/main.30f37a6c.js.map",
+    "787.663e1816.chunk.js.map": "/thundr-assignment/static/js/787.663e1816.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.365955db.css",
+    "static/js/main.30f37a6c.js"
+  ]
+}
