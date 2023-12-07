@@ -8,7 +8,7 @@ export interface FetchTickersProps {
 export const useFetchTickers = ({ limit, searchValue }: FetchTickersProps) => {
   const baseUrl: string = "https://api.polygon.io/v3/reference/tickers";
   const apiKey: string = "oQfYx_g9dVW8iWHZGaopZKlBgaorNAKN";
-  const url: string = `${baseUrl}?ticker=${searchValue}&active=true&limit=${limit}&apiKey=${apiKey}`;
+  const url: string = `${baseUrl}?ticker=${searchValue.toUpperCase()}&active=true&limit=${limit}&apiKey=${apiKey}`;
 
   const [tickers, setTickers] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
